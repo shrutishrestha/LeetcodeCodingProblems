@@ -12,3 +12,7 @@ def func(k, arr):
             start += 1
     return average_list
 print(func(5, [1, 3, 2, 6, -1, 4, 1, 8, 2]))
+
+#
+# time complexity = O(N) # for loop
+# space complexity = O(1) #O(1) means that it takes a constant time, like 14 nanoseconds, or three minutes no mat
