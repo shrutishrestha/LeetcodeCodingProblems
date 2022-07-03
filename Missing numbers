@@ -1,0 +1,18 @@
+Unsorted array, range 1 to n, can contain duplicaates, so, some number missing, find missing
+def find_missing_numbers(nums):
+  missingNumbers = []
+  i = 0
+  while i < len(nums):
+    j = nums[i] - 1 
+    if nums[i] != nums[j]: #i+1 != nums[i] or  here wont be this one because 12312358 after sorting, so the 1 2 3 wont ever be in this position or the real numbers wont be there so execution time out
+      nums[i], nums[j] = nums[j], nums[i]
+    else:
+      i += 1 
+
+  for i in range(len(nums)):
+    if (i+1) != nums[i]:
+      missingNumbers.append(i+1)
+  return missingNumbers
+
+
+  
